@@ -11,16 +11,23 @@ export default class Form extends Component {
     }
   }
 
+handleChange = e =>  {
+    this.setState({
+        [e.target.name]: e.target.value
+    })
+    // console.log(this.state)
+}
+
   render() {
     return (
       <div className="form-container">
         <div className='form-inputs'>
           <h2>Image URL</h2>
-          <input type='text'/>
+          <input onChange={e => this.handleChange(e)} type='text' name='image'/>
           <h2>Product Name</h2>
-          <input type='text'/>
+          <input onChange={e => this.handleChange(e)} type='text' name='productName'/>
           <h2>Price</h2>
-          <input type='number'/>
+          <input onChange={e => this.handleChange(e)} type='number' name='price'/>
         </div>
         <div className="form-buttons">
           <button>Cancel</button>
