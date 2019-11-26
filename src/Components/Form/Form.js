@@ -15,7 +15,15 @@ handleChange = e =>  {
     this.setState({
         [e.target.name]: e.target.value
     })
-    // console.log(this.state)
+    console.log(this.state)
+}
+
+cancel = () => {
+    this.setState({
+        image: '',
+        productName: '',
+        price: 0
+    })
 }
 
   render() {
@@ -30,7 +38,7 @@ handleChange = e =>  {
           <input onChange={e => this.handleChange(e)} type='number' name='price'/>
         </div>
         <div className="form-buttons">
-          <button>Cancel</button>
+          <button onClick={() => this.cancel()}>Cancel</button>
           <button>Add to Inventory</button>
         </div>
       </div>
