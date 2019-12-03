@@ -21,6 +21,7 @@ export default class App extends Component {
       this.setState({
         goods: res.data
       })
+      console.log(this.state)
     })
   }
 
