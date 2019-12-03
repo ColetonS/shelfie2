@@ -14,3 +14,5 @@ massive(CONNECTION_STRING)
     app.listen(SERVER_PORT, () => console.log(`Listening on port ${SERVER_PORT}`))
 })
 .catch(err => console.log(err, 'cannot connect to database'))
+
+app.get('/api/goods', ctrl.getGoods)
