@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Form.scss'
 
 export default class Form extends Component {
   constructor() {
@@ -15,7 +16,7 @@ handleChange = e =>  {
     this.setState({
         [e.target.name]: e.target.value
     })
-    console.log(this.state)
+    
 }
 
 cancel = () => {
